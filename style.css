@@ -1,0 +1,78 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f2f2f2;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navigation Bar using Flexbox */
+.navbar {
+  display: flex;
+  background-color: #333;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+}
+
+.navbar a {
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+.navbar a:hover {
+  background-color: #575757;
+  border-radius: 4px;
+}
+
+/* Main Content Section using CSS Grid */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.content-box {
+  background-color: white;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Footer */
+.footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Media Queries for Responsiveness */
+/* For Tablets (up to 768px) */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .navbar {
+    flex-direction: column;
+  }
+}
+
+/* For Mobile Devices (up to 480px) */
+@media (max-width: 480px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
